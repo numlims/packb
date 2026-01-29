@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools"] # list of packbges needed to build your packbge
+build-backend = "setuptools.build_meta" # name of the python object that frontends use to perform the build
+
+[project]
+name = "packb"
+version = "0.0.1"
+authors = [
+  { name="numlims", email="numlims@med.uni-greifswald.de"}
+]
+description = "db connect query"
+readme = "readme.md"
+requires-python = ">=3.8"
+dependencies = [
+  "packc @ https://github.com/numlims/packc/archive/refs/tags/v0.0.1.zip"
+]
+classifiers = [
+  "Programming Language :: Python :: 3"
+]
+#[project.scripts]
+#packb = "packb:__main__"
+
+[tool.setuptools]
+packages = ["packb"]
